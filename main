@@ -1,0 +1,38 @@
+#Snake Water Gun
+
+import random
+i = 1
+j = 0
+k = 0
+while i < 10:
+    x = input("Choose any item in:[Snake,Water,Gun]\n")
+    random_gauss = ["snake","water","gun"]
+    choice = random.choice(random_gauss)
+    a = f"Bot Choose --> {choice} "
+    print(a)
+    if x == "snake" and choice == "water":
+        print("You win!")
+        j = j + 1
+    elif x == "snake" and choice == "gun":
+        print("You lose!")
+        k = k + 1
+    elif x == "water" and choice == "gun":
+        print("You win!")
+        j = j + 1
+    elif x == "water" and choice == "snake":
+        print("You lose!")
+        k = k + 1
+    elif x == "gun" and choice == "water":
+        print("You lose!")
+        k = k + 1
+    elif x == "gun" and choice == "snake":
+        print("You win!")
+        j = j + 1
+    else:
+        print("Tie.")
+
+    i = i+1
+    print("Score is:\n VISHAL-->",j,"BOT-->",k)
+
+print("\n\n")
+print("GAME OVER!!")
